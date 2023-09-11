@@ -7,19 +7,16 @@
   <title>Pastry Courses</title>
   <style>
     .main-section {
-      background-image: url('https://raw.githubusercontent.com/asyagogaeva/asyagogaeva.github.io/main/t1.jpeg');
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://raw.githubusercontent.com/asyagogaeva/asyagogaeva.github.io/main/t2.jpeg');
       background-size: cover;
       background-position: center;
       color: white;
       height: 100vh;
     }
     .about-me-section {
-      background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://raw.githubusercontent.com/asyagogaeva/asyagogaeva.github.io/main/m_photo.JPG');
-      background-size: cover;
-      background-position: center;
+      background: linear-gradient(to bottom, #666, #333);
       color: white;
-      height: 100vh;
-      text-shadow: 2px 2px 4px #000000;
+      padding: 50px 0;
     }
     .divider {
       height: 50px;
@@ -31,13 +28,31 @@
       z-index: 1000;
     }
     .text-container {
-      max-width: 800px; 
+      max-width: 800px;
       margin: auto;
+    }
+    .btn {
+      background-color: grey;
+      color: white;
+    }
+    .footer {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+    .about-img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    @media (min-width: 992px) {
+      .about-img {
+        margin-bottom: 0;
+      }
     }
   </style>
 </head>
 <body>
-
   <!-- Sticky Top Menu -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -62,8 +77,8 @@
   <div class="main-section d-flex align-items-center justify-content-center text-center">
     <div>
       <h1>Welcome to Pastry Courses!</h1>
-      <p>Learn the art of baking from experts.</p>
-      <a href="https://learning.gogaeva.com" class="btn btn-primary">Get Started</a>
+      <p>Dive into a professional curriculum designed to elevate your pastry skills and explore the world of patisserie!</p>
+      <a href="https://learning.gogaeva.com" class="btn">Get Started</a>
     </div>
   </div>
 
@@ -71,19 +86,37 @@
   <div class="divider"></div>
 
   <!-- About Me Section -->
-  <div class="about-me-section d-flex align-items-center justify-content-center text-center" id="about-me-section">
-    <div class="text-container">
-      <h2>About Me</h2>
-      <p class="text-justify">
-        I'm Asya Gogaeva, a Pastry Chef with hands-on experience at places like Ottolenghi (London, UK) and The Tempered Room (Toronto, Canada). On this resource, you'll find my favourite pastry recipes, alongside step-by-step guides and insights that cater to all skill levels. We'll cover everything from classic French pastries like Brioche and Crème Brûlée to inventive fusion desserts that blend various culinary traditions. My passion lies in experimenting with new flavors, ingredients, and techniques, and I believe that baking is an area where creativity thrives. Dive in and explore; there's a wealth of knowledge and inspiration here, whether you're just starting out or you're a seasoned pro in the kitchen.
-      </p>
-      <a href="https://learning.gogaeva.com" class="btn btn-dark">Get Started</a>
+  <div class="about-me-section" id="about-me-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="https://raw.githubusercontent.com/asyagogaeva/asyagogaeva.github.io/main/AG_profile_cr.png" alt="Your Image" class="about-img">
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+          <div class="text-container">
+            <h2>About Me</h2>
+            <p>
+              I'm Asya Gogaeva, a Pastry Chef with hands-on experience at places like Ottolenghi (London, UK) and The Tempered Room (Toronto, Canada). On this resource, you'll find my favourite pastry recipes, alongside step-by-step guides and insights that cater to all skill levels. We'll cover everything from classic French pastries like Brioche and Crème Brûlée to inventive fusion desserts that blend various culinary traditions. My passion lies in experimenting with new flavors, ingredients, and techniques, and I believe that baking is an area where creativity thrives. Dive in and explore; there's a wealth of knowledge and inspiration here, whether you're just starting out or you're a seasoned pro in the kitchen. Click on the button below to enter the education portal.
+            </p>
+            <a href="https://learning.gogaeva.com" class="btn">Get Started</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; <span id="current-year"></span> Asya Gogaeva | <a href="https://www.instagram.com/asya.gogaeva/"> Instagram </i></a></p>
+  </div>
 
   <!-- Bootstrap JS (optional) -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
+
+  <!-- Script to update the current year in the footer -->
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
